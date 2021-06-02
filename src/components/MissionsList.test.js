@@ -10,3 +10,10 @@ const missions = [
 test('renders without errors', () => {
     render(<MissionsList missions={[]} />)
 })
+
+test('renders change in mission list correctly', () => {
+    // Act: 
+    render(<MissionsList missions={[]} />)
+    // Arrange:
+    // Assert:
+})
