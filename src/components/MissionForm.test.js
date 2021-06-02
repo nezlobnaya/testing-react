@@ -37,5 +37,5 @@ test('calls getData when button is clicked', () => {
     const button = screen.getByRole('button');
     userEvent.click(button)
     // Assert:
-    console.log(fakeGetData);
+    console.log(fakeGetData.mock);
 })
