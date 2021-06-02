@@ -18,6 +18,13 @@ test('render message correctly when isFetchingData is true', () => {
     expect(item).toBeInTheDocument();
 })
 // Does the component render correctly when isFetchingData is false?
-test('render message correctly when isFetchingData is false', () => {})
+test('render message correctly when isFetchingData is false', () => {
+    // Arrange: Show MissionForm with isFetchingData = false
+    render(<MissionForm isFetchingData={false} />)
+    // Act: query Button 
+    const button = screen.getByRole('button');
+    // Assert: 'we are fetching data' NOT exists on the page, button on page
+    expect(item).toBeInTheDocument();
+})
 // When we have a piece of user input, does getData execute?
 test('calls getData when button is clicked', () => {})
