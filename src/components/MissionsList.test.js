@@ -19,4 +19,6 @@ test('renders change in mission list correctly', () => {
     // Assert:
     expect(missionObjects).toEqual([])
     expect(missionObjects).toHaveLength(0)
+
+    rerender(<MissionsList missions={missions} />)
 })
