@@ -15,5 +15,7 @@ test('renders change in mission list correctly', () => {
     // Act: 
     render(<MissionsList missions={[]} />)
     // Arrange:
+    let missionObjects = screen.queryAllByTestId('mission')
     // Assert:
+    expect(missionObjects).toEqual([])
 })
