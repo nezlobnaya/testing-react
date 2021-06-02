@@ -34,12 +34,11 @@ test('calls getData when button is clicked', () => {
     });
     // Make sure we can see our button
     // Arrange:
-    render(<MissionForm isFetchingData={false} getData={fakeGetData('fakeArg')} />)
+    render(<MissionForm isFetchingData={false} getData={fakeGetData} />)
     // Act:
     const button = screen.getByRole('button');
     userEvent.click(button)
-    userEvent.click(button)
-    userEvent.click(button)
     // Assert:
     console.log(fakeGetData.mock);
+    expect(fakeGetData.mock)
 })
