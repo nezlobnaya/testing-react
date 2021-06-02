@@ -21,4 +21,7 @@ test('renders change in mission list correctly', () => {
     expect(missionObjects).toHaveLength(0)
 
     rerender(<MissionsList missions={missions} />)
+    let missionObjects = screen.queryAllByTestId('mission')
+    expect(missionObjects).toHaveLength(2)
+
 })
