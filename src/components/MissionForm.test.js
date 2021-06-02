@@ -11,6 +11,9 @@ test('MissionForm renders correctly without errors', () => {
 test('render message correctly when isFetchingData is true', () => {
     // Arrange: Show MissionForm with isFetchingData = true
     render(<MissionForm isFetchingData={true} />)
+    // Act: Query the text 'we are fetching data'
+    const item = screen.getByText(/we are fetching data/i)
+    // Assert:
 })
 // Does the component render correctly when isFetchingData is false?
 test('render message correctly when isFetchingData is false', () => {})
