@@ -22,7 +22,8 @@ test('render message correctly when isFetchingData is false', () => {
     // Arrange: Show MissionForm with isFetchingData = false
     render(<MissionForm isFetchingData={false} />)
     // Act: query Button 
-    const button = screen.getByRole('button');
+    const item = screen.queryByRole(/button/i)
+
     // Assert: 'we are fetching data' NOT exists on the page, button on page
     expect(item).toBeInTheDocument();
 })
