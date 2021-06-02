@@ -29,7 +29,9 @@ test('render message correctly when isFetchingData is false', () => {
 })
 // When we have a piece of user input, does getData execute?
 test('calls getData when button is clicked', () => {
-    const fakeGetData = jest.fn();
+    const fakeGetData = jest.fn(() => {
+        return ('this is fake data')
+    });
     // Make sure we can see our button
     // Arrange:
     render(<MissionForm isFetchingData={false} getData={fakeGetData} />)
