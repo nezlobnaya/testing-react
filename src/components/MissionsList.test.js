@@ -18,4 +18,5 @@ test('renders change in mission list correctly', () => {
     let missionObjects = screen.queryAllByTestId('mission')
     // Assert:
     expect(missionObjects).toEqual([])
+    expect(missionObjects).toHaveLength(0)
 })
