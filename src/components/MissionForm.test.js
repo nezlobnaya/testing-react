@@ -34,7 +34,7 @@ test('calls getData when button is clicked', () => {
     });
     // Make sure we can see our button
     // Arrange:
-    render(<MissionForm isFetchingData={false} getData={fakeGetData} />)
+    render(<MissionForm isFetchingData={false} getData={fakeGetData('fakeArg')} />)
     // Act:
     const button = screen.getByRole('button');
     userEvent.click(button)
