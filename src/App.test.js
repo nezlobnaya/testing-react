@@ -25,6 +25,6 @@ test('renders mission data when button is clicked', async () => {
     userEvent.click(button)
     // Assert: we should see same number of missions when api returns
     await waitFor(() => {
-        expect(screen.getAllByTestId('mission')).toHaveLength(10);
+        expect(screen.getAllByTestId('mission')).toHaveLength(2);
     })
 })
