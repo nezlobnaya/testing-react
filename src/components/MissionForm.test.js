@@ -22,10 +22,18 @@ test('render message correctly when isFetchingData is false', () => {
     // Arrange: Show MissionForm with isFetchingData = false
     render(<MissionForm isFetchingData={false} />)
     // Act: query Button 
-    const item = screen.queryByRole(/button/i)
+    const button = screen.queryByRole(/button/i)
 
     // Assert: 'we are fetching data' NOT exists on the page, button on page
-    expect(item).toBeInTheDocument();
+    expect(button).toBeInTheDocument();
 })
 // When we have a piece of user input, does getData execute?
-test('calls getData when button is clicked', () => {})
+test('calls getData when button is clicked', () => {
+    // Make sure we can see our button
+    // Arrange:
+    render(<MissionForm isFetchingData={false} />)
+    // Act:
+    const button = screen.getByRole('button');
+    userEvent.click(button)
+    // Assert:
+})
