@@ -8,7 +8,10 @@ test('MissionForm renders correctly without errors', () => {
 })
 
 // Does the component render correctly when isFetchingData is true?
-test('render message correctly when isFetchingData is true', () => {})
+test('render message correctly when isFetchingData is true', () => {
+    // Arrange: Show MissionForm with isFetchingData = true
+    render(<MissionForm isFetchingData={true} />)
+})
 // Does the component render correctly when isFetchingData is false?
 test('render message correctly when isFetchingData is false', () => {})
 // When we have a piece of user input, does getData execute?
