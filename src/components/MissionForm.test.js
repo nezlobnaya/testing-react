@@ -31,7 +31,7 @@ test('render message correctly when isFetchingData is false', () => {
 test('calls getData when button is clicked', () => {
     // Make sure we can see our button
     // Arrange:
-    render(<MissionForm isFetchingData={false} />)
+    render(<MissionForm isFetchingData={false} getData={} />)
     // Act:
     const button = screen.getByRole('button');
     userEvent.click(button)
